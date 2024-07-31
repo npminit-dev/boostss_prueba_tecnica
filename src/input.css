@@ -2,8 +2,149 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer base {
+
+  @font-face {
+    font-family: 'Merriweather';
+    font-style: normal;
+    font-weight: 100;
+    font-display: swap;
+    src: url(/src/assets/Merriweather-Light.ttf) format('woff2');
+  }
+
+  @font-face {
+    font-family: 'Roboto Slab';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url(/src/assets/RobotoSlab-VariableFont_wght.ttf);
+  }
+}
+
 @layer components {
-  .colored {
-    color: red;
+
+  * {
+    box-sizing: border-box;
+  }
+
+  /* tailwind based classes */
+  .mobile_nav_hover {
+    @apply hover:bg-gradient-to-r hover:from-primary from-10% hover:via-secondary via-50% hover:to-primary to-85% 
+    md:hover:bg-transparent md:hover:from-transparent md:hover:via-transparent md:hover:to-transparent
+  }
+
+  .nav_bg_gradient {
+    @apply bg-gradient-to-r from-60% from-primary to-100% to-emphasis
+  }
+
+  /* pure css classes */
+
+  .main_background {
+    background-image: url('/main_background.webp');
+    background-position: center;
+    background-size: cover;
+    background-color: white;
+  }
+
+  .section_box {
+    height: calc(100vh - 70px);
+    @media screen and (width < 768px) {
+      height: calc(100vh - 55px);
+    }
+  }
+
+  .home_img {
+    background-image: url('/home_photo.webp');
+    background-size: 105% 105%;
+    background-position: center;
+    filter: grayscale(40%);
+  }
+
+  .home_img:hover {
+    background-size: 100% 100%;
+    filter: grayscale(0);
+  }
+
+  .text_emphasis {
+    text-shadow: 2px 2px 5px #fbfbfeab, -2px -2px 5px #fbfbfeab, -2px 2px 5px #fbfbfeab, 2px -2px 5px #fbfbfeab;
+  }
+
+  /* animations */
+
+  .smth_appear {
+    filter: opacity(0);
+    animation: smth_appear 200ms ease-out forwards
+  }
+
+  .smth_appear_longer {
+    filter: opacity(0);
+    animation: smth_appear 1s ease-out 1s forwards
+  }
+
+  .smth_appear_long {
+    filter: opacity(0);
+    animation: smth_appear 1s ease-out 2.5s forwards
+  }
+
+  .smth_appear_verylong {
+    filter: opacity(0);
+    animation: smth_appear 1s ease-out 4s forwards
+  }
+
+  .fadein_down {
+    animation: fadein_down 300ms ease-out forwards
+  }
+
+  .fadein_down_long {
+    filter: opacity(0);
+    animation: fadein_down 1s ease-out 200ms forwards
+  }
+
+  .link_box:hover > .draw_menuline {
+    float: left;
+    animation: draw_menuline 250ms ease-out forwards
+  }
+
+  .link_box:not(:hover) > .draw_menuline {
+    float: right;
+    animation: undraw_menuline 250ms ease-in forwards
+  }
+
+  @keyframes smth_appear {
+    from {
+      filter: opacity(0);
+    }
+    to {
+      filter: opacity(1);
+    }
+  }
+
+  @keyframes fadein_down {
+    from {
+      filter: opacity(0);
+      transform: translateY(-30px);
+    }
+    to {
+      filter: opacity(1);
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes draw_menuline {
+    from {
+      width: 0%
+    }
+    to {
+      width: 100%
+    } 
+  }
+
+  @keyframes undraw_menuline {
+    from {
+      width: 100%
+    }
+    to {
+      width: 0%
+    } 
   }
 }

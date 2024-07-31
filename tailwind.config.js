@@ -9,6 +9,10 @@ export default {
         primary: '#D8BFD8',
         secondary: '#8B4513',
         emphasis: '#DEB887',
+      },
+      fontFamily: {
+        merri: 'Merriweather',
+        roboto: 'Roboto Slab',
       }
     },
   },

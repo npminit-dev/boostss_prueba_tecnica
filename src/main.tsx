@@ -3,9 +3,9 @@ import ReactDOM from 'react-dom/client'
 import App from './App'
 import './output.css'
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import Home from './home/Home';
-import Products from './products/Products';
-import Contact from './contact/Contact';
+import Home from './components/home/Home';
+import Products from './components/products/Products';
+import Contact from './components/contact/Contact';
 
 const appRouter = createBrowserRouter([
   {
