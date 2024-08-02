@@ -36,6 +36,7 @@
   }
 
   /* tailwind based classes */
+
   .mobile_nav_hover {
     @apply hover:bg-gradient-to-r hover:from-primary from-10% hover:via-emphasis via-50% hover:to-primary to-85% 
     md:hover:bg-transparent md:hover:from-transparent md:hover:via-transparent md:hover:to-transparent
@@ -61,16 +62,16 @@
   }
 
   .section_box {
-    height: calc(100vh - 70px);
+    height: calc(100vh - 60px);
     @media screen and (width < 768px) {
-      height: calc(100vh - 55px);
+      height: calc(100vh - 48px);
     }
   }
 
   .min_section_box {
-    min-height: calc(100vh - 70px);
+    min-height: calc(100vh - 60px);
     @media screen and (width < 768px) {
-      min-height: calc(100vh - 55px);
+      min-height: calc(100vh - 48px);
     }
   }
 
@@ -90,6 +91,10 @@
     text-shadow: 2px 2px 5px #fbfbfeab, -2px -2px 5px #fbfbfeab, -2px 2px 5px #fbfbfeab, 2px -2px 5px #fbfbfeab;
   }
 
+  .zero_opacity {
+    filter: opacity(0);
+  }
+
   /* animations */
 
   .smth_appear {
@@ -104,17 +109,17 @@
 
   .smth_appear_longer {
     filter: opacity(0);
-    animation: smth_appear 1s ease-out 1s forwards
+    animation: smth_appear 1s ease-out 800ms forwards
   }
 
   .smth_appear_long {
     filter: opacity(0);
-    animation: smth_appear 1s ease-out 2.5s forwards
+    animation: smth_appear 1s ease-out 1600ms forwards
   }
 
   .smth_appear_verylong {
     filter: opacity(0);
-    animation: smth_appear 1s ease-out 4s forwards
+    animation: smth_appear 1s ease-out 2500ms forwards
   }
 
   .fadein_down {
@@ -131,6 +136,21 @@
     animation: fadein_left 300ms ease-out forwards
   }
 
+  .fadeout_left {
+    filter: opacity(1);
+    animation: fadein_out 300ms ease-out forwards
+  }
+
+  .fadein_left_long {
+    filter: opacity(0);
+    animation: fadein_left 1s ease-out forwards
+  }
+
+  .fadeout_right_long {
+    filter: opacity(1);
+    animation: fadeout_right 1s ease-out forwards
+  }
+
   .link_box:hover > .draw_menuline {
     float: left;
     animation: draw_menuline 200ms ease-out forwards
@@ -140,6 +160,8 @@
     float: right;
     animation: undraw_menuline 200ms ease-in forwards
   }
+
+  /* keyframes */
 
   @keyframes smth_appear {
     from {
@@ -181,6 +203,17 @@
     }
   }
 
+  @keyframes fadeout_right {
+    from {
+      filter: opacity(1);
+      transform: translateX(0);
+    }
+    to {
+      filter: opacity(0);
+      transform: translateX(-30px);
+    }
+  }
+
   @keyframes draw_menuline {
     from {
       width: 0%
@@ -198,4 +231,11 @@
       width: 0%
     } 
   }
+
+  /* removing ugly form styles */
+  input, select, textarea {
+    outline: none
+  }
+
 }
+

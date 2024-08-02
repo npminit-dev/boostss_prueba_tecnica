@@ -1,6 +1,7 @@
 import LinkToProds from "./LinkToProds";
 import MainImage from "./MainImage";
 import Presentation from "./Presentation";
+import Reviews from "./Reviews";
 import Title from "./Title";
 
 const Home = () => {
@@ -11,14 +12,18 @@ const Home = () => {
         <MainImage/>
         <Presentation/>
         <LinkToProds/>
+        <Reviews/>
       </div>
-      <div className="h-full w-full md:flex hidden flex-row items-center justify-around">
-        <div className="h-[350px] flex flex-col items-center justify-around">
-          <Title/>
-          <Presentation/>
-          <LinkToProds/>
+      <div className="h-full w-full md:flex hidden flex-col items-center justify-around">
+        <div className="h-fit w-full flex flex-row items-center justify-around">
+          <div className="h-[350px] w-fit flex flex-col items-center justify-around">
+            <Title/>
+            <Presentation/>
+            <LinkToProds/>
+          </div>
+          <MainImage/>
         </div>
-        <MainImage/>
+        <Reviews/>
       </div>
     </section>
   );

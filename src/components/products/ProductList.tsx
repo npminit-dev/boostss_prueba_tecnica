@@ -61,7 +61,7 @@ const ProductList = ({ products }: ProductListProps) => {
             !cartOpen && cart.length ? 
             <div
               onClick={() => setCartOpen(true)} 
-              className="relative h-[40px] w-[40px] sm:h-[50px] sm:w-[50px] flex items-center justify-center mr-1 sm:mr-2 mb-2 float-right smth_appear_slow bg-secondary rounded-full border-text border-2 cursor-pointer duration-200 z-0"
+              className="relative h-[40px] w-[40px] sm:h-[50px] sm:w-[50px] flex items-center justify-center mr-1 sm:mr-2 mb-2 float-right smth_appear bg-secondary rounded-full border-text border-2 cursor-pointer duration-200 z-0"
               title="Open cart"
             >
             { 
