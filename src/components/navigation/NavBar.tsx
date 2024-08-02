@@ -32,7 +32,7 @@ const NavBar = () => {
             className="h-[25px] w-[25px] md:hidden cursor-pointer hover:scale-110 smth_appear duration-200"
           />
         }
-        <img className="w-[60px] md:w-[80px] m-1 cursor-pointer hover:scale-110 hover:-rotate-2 duration-300" onClick={() => navigate('/home')} src="/resto_logo.png"/>
+        <img className="w-[60px] md:w-[80px] cursor-pointer hover:scale-110 hover:-rotate-2 duration-300" onClick={() => navigate('/home')} src="/resto_logo.png"/>
       </div>
       {
       mobileNavOpen ? 

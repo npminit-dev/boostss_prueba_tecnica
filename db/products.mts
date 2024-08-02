@@ -1,0 +1,277 @@
+import { Product } from "../typedefinitions"
+
+const products: Product[] = [
+  {
+    "id": 1,
+    "name": "Filet Mignon with Truffle Sauce",
+    "description": "A succulent cut of beef, cooked to perfection and accompanied by a delicate black truffle sauce, served with rosemary-infused mashed potatoes.",
+    "price": 75.99,
+    "category": "Main Course",
+    "preparationTime": 35,
+    "rating": 4.8,
+  },
+  {
+    "id": 2,
+    "name": "Lobster Thermidor",
+    "description": "Fresh lobster gratinated with a rich blend of cream, egg yolks, and Dijon mustard, accompanied by steamed asparagus.",
+    "price": 89.50,
+    "category": "Main Course",
+    "preparationTime": 40,
+    "rating": 4.9,
+  },
+  {
+    "id": 3,
+    "name": "Coq au Vin",
+    "description": "Classic French dish of chicken braised in red wine, mushrooms, and onions, served with buttery mashed potatoes.",
+    "price": 60.00,
+    "category": "Main Course",
+    "preparationTime": 50,
+    "rating": 4.7,
+  },
+  {
+    "id": 4,
+    "name": "Caviar with Blinis and Crème Fraîche",
+    "description": "Exquisite caviar served atop delicate blinis with a dollop of crème fraîche, a dish of unparalleled elegance.",
+    "price": 120.00,
+    "category": "Appetizer",
+    "preparationTime": 20,
+    "rating": 4.9,
+  },
+  {
+    "id": 5,
+    "name": "Chocolate Fondant with Vanilla Bean Ice Cream",
+    "description": "Decadent chocolate fondant with a molten center, served with a scoop of vanilla bean ice cream.",
+    "price": 25.00,
+    "category": "Dessert",
+    "preparationTime": 25,
+    rating: 4.8
+  },
+  {
+    "id": 6,
+    "name": "Beef Wellington",
+    "description": "Tender beef fillet wrapped in layers of pâté, duxelles, and puff pastry, baked to golden perfection and served with a rich red wine jus.",
+    "price": 95.00,
+    "category": "Main Course",
+    "preparationTime": 45,
+    "rating": 4.9,
+  },
+  {
+    "id": 7,
+    "name": "Seared Foie Gras with Caramelized Apples",
+    "description": "Luxurious foie gras, seared to perfection and served with caramelized apples and a drizzle of balsamic reduction.",
+    "price": 85.00,
+    "category": "Appetizer",
+    "preparationTime": 20,
+    "rating": 4.8,
+  },
+  {
+    "id": 8,
+    "name": "Risotto alla Milanese with Saffron",
+    "description": "Creamy risotto infused with the finest saffron, topped with a sprinkle of Parmigiano-Reggiano.",
+    "price": 50.00,
+    "category": "Main Course",
+    "preparationTime": 30,
+    "rating": 4.7,
+  },
+  {
+    "id": 9,
+    "name": "Chateaubriand with Béarnaise Sauce",
+    "description": "Prime cut of beef tenderloin, perfectly grilled and served with a classic Béarnaise sauce, accompanied by seasonal vegetables.",
+    "price": 110.00,
+    "category": "Main Course",
+    "preparationTime": 40,
+    "rating": 4.9,
+  },
+  {
+    "id": 10,
+    "name": "Tarte Tatin",
+    "description": "An elegant upside-down tart of caramelized apples, served warm with a scoop of vanilla ice cream.",
+    "price": 30.00,
+    "category": "Dessert",
+    "preparationTime": 35,
+    "rating": 4.8,
+  },
+  {
+    "id": 11,
+    "name": "Oysters Rockefeller",
+    "description": "Plump oysters baked on the half shell with a rich mixture of spinach, herbs, and Pernod, topped with buttery breadcrumbs.",
+    "price": 70.00,
+    "category": "Appetizer",
+    "preparationTime": 25,
+    "rating": 4.8,
+  },
+  {
+    "id": 12,
+    "name": "Duck à l'Orange",
+    "description": "Crispy duck breast glazed with a classic orange sauce, served with braised red cabbage and roasted potatoes.",
+    "price": 80.00,
+    "category": "Main Course",
+    "preparationTime": 50,
+    "rating": 4.7,
+  },
+  {
+    "id": 13,
+    "name": "Bouillabaisse",
+    "description": "A traditional Provençal fish stew made with the freshest seafood, flavored with saffron, garlic, and tomatoes, served with a side of rouille and toasted bread.",
+    "price": 95.00,
+    "category": "Main Course",
+    "preparationTime": 60,
+    "rating": 4.9,
+  },
+  {
+    "id": 14,
+    "name": "Baked Alaska",
+    "description": "A spectacular dessert of sponge cake topped with ice cream, all encased in toasted meringue, flambéed tableside.",
+    "price": 45.00,
+    "category": "Dessert",
+    "preparationTime": 30,
+    "rating": 4.9,
+  },
+  {
+    "id": 15,
+    "name": "Scallops with Champagne Sauce",
+    "description": "Pan-seared scallops served with a luxurious Champagne sauce, garnished with fresh herbs and a touch of caviar.",
+    "price": 90.00,
+    "category": "Appetizer",
+    "preparationTime": 20,
+    "rating": 4.9,
+  },
+  {
+    "id": 16,
+    "name": "Rack of Lamb with Herb Crust",
+    "description": "Tender rack of lamb encrusted with fresh herbs and garlic, roasted to perfection, served with a red wine reduction and baby vegetables.",
+    "price": 100.00,
+    "category": "Main Course",
+    "preparationTime": 40,
+    "rating": 4.8
+  },
+  {
+    "id": 17,
+    "name": "Sea Bass en Papillote",
+    "description": "Delicate sea bass fillet steamed in parchment with julienned vegetables, white wine, and herbs, served with a light beurre blanc.",
+    "price": 85.00,
+    "category": "Main Course",
+    "preparationTime": 35,
+    "rating": 4.7
+  },
+  {
+    "id": 18,
+    "name": "Black Truffle Risotto",
+    "description": "Creamy risotto made with arborio rice, infused with aromatic black truffles and finished with Parmigiano-Reggiano.",
+    "price": 120.00,
+    "category": "Main Course",
+    "preparationTime": 30,
+    "rating": 4.9
+  },
+  {
+    "id": 19,
+    "name": "Quail Stuffed with Wild Mushrooms",
+    "description": "Succulent quail stuffed with a blend of wild mushrooms, herbs, and foie gras, served with a port wine reduction.",
+    "price": 105.00,
+    "category": "Main Course",
+    "preparationTime": 45,
+    "rating": 4.8
+  },
+  {
+    "id": 20,
+    "name": "Mille-Feuille",
+    "description": "A classic French pastry with layers of crispy puff pastry, filled with rich vanilla custard and topped with a delicate glaze.",
+    "price": 35.00,
+    "category": "Dessert",
+    "preparationTime": 25,
+    "rating": 4.7
+  },
+
+  {
+    "id": 21,
+    "name": "Peking Duck",
+    "description": "Crispy Peking duck served with thin pancakes, hoisin sauce, and sliced scallions, offering an authentic taste of Chinese culinary artistry.",
+    "price": 130.00,
+    "category": "Main Course",
+    "preparationTime": 60,
+    "rating": 4.9
+  },
+  {
+    "id": 22,
+    "name": "Lobster Bisque",
+    "description": "Rich and creamy lobster bisque, made with fresh lobster stock, a touch of brandy, and finished with a swirl of cream.",
+    "price": 70.00,
+    "category": "Appetizer",
+    "preparationTime": 30,
+    "rating": 4.8
+  },
+  {
+    "id": 23,
+    "name": "Osso Buco alla Milanese",
+    "description": "Slow-braised veal shanks in a savory tomato and white wine sauce, served with a saffron risotto, a true Milanese specialty.",
+    "price": 90.00,
+    "category": "Main Course",
+    "preparationTime": 90,
+    "rating": 4.8
+  },
+  {
+    "id": 24,
+    "name": "Tournedos Rossini",
+    "description": "Filet mignon topped with foie gras and truffle, served with a Madeira sauce, exemplifying French gourmet cuisine.",
+    "price": 150.00,
+    "category": "Main Course",
+    "preparationTime": 50,
+    "rating": 4.9
+  },
+  {
+    "id": 25,
+    "name": "Pan-Seared Scallops with Lemon Butter",
+    "description": "Perfectly seared scallops with a zesty lemon butter sauce, garnished with fresh herbs and served with a side of sautéed spinach.",
+    "price": 95.00,
+    "category": "Main Course",
+    "preparationTime": 25,
+    "rating": 4.7
+  },
+  {
+    "id": 26,
+    "name": "Boeuf Bourguignon",
+    "description": "Traditional French stew of beef braised in red wine, with carrots, onions, and mushrooms, served with crusty bread.",
+    "price": 75.00,
+    "category": "Main Course",
+    "preparationTime": 120,
+    "rating": 4.8
+  },
+  {
+    "id": 27,
+    "name": "Shrimp Scampi",
+    "description": "Juicy shrimp sautéed in garlic butter, white wine, and lemon, served over a bed of linguine with a sprinkle of parsley.",
+    "price": 80.00,
+    "category": "Main Course",
+    "preparationTime": 25,
+    "rating": 4.7
+  },
+  {
+    "id": 28,
+    "name": "Ratatouille",
+    "description": "Classic Provençal vegetable dish, featuring layers of eggplant, zucchini, and bell peppers, slow-cooked in a tomato and herb sauce.",
+    "price": 55.00,
+    "category": "Main Course",
+    "preparationTime": 60,
+    "rating": 4.6
+  },
+  {
+    "id": 29,
+    "name": "Crème Brûlée",
+    "description": "Rich custard topped with a thin, crisp layer of caramelized sugar, served chilled with a hint of vanilla.",
+    "price": 30.00,
+    "category": "Dessert",
+    "preparationTime": 20,
+    "rating": 4.9
+  },
+  {
+    "id": 30,
+    "name": "Escargots à la Bourguignonne",
+    "description": "Tender snails baked in garlic herb butter, served with warm crusty bread for a true taste of French cuisine.",
+    "price": 65.00,
+    "category": "Appetizer",
+    "preparationTime": 25,
+    "rating": 4.8
+  }
+]
+
+export default products

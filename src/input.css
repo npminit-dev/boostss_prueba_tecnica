@@ -17,7 +17,15 @@
     font-style: normal;
     font-weight: 400;
     font-display: swap;
-    src: url(/src/assets/RobotoSlab-VariableFont_wght.ttf);
+    src: url(/src/assets/RobotoSlab-Light.ttf) format('woff2');
+  }
+
+  @font-face {
+    font-family: 'DY Crayon Crumble';
+    font-style: normal;
+    font-weight: 200;
+    font-display: swap;
+    src: url(/src/assets/DK\ Crayon\ Crumble.ttf) format('woff2');
   }
 }
 
@@ -29,12 +37,17 @@
 
   /* tailwind based classes */
   .mobile_nav_hover {
-    @apply hover:bg-gradient-to-r hover:from-primary from-10% hover:via-secondary via-50% hover:to-primary to-85% 
+    @apply hover:bg-gradient-to-r hover:from-primary from-10% hover:via-emphasis via-50% hover:to-primary to-85% 
     md:hover:bg-transparent md:hover:from-transparent md:hover:via-transparent md:hover:to-transparent
   }
 
   .nav_bg_gradient {
     @apply bg-gradient-to-r from-60% from-primary to-100% to-emphasis
+  }
+
+  .animate-spin-reverse {
+    @apply animate-spin;
+    animation-direction: reverse;
   }
 
   /* pure css classes */
@@ -43,6 +56,7 @@
     background-image: url('/main_background.webp');
     background-position: center;
     background-size: cover;
+    background-attachment: fixed;
     background-color: white;
   }
 
@@ -50,6 +64,13 @@
     height: calc(100vh - 70px);
     @media screen and (width < 768px) {
       height: calc(100vh - 55px);
+    }
+  }
+
+  .min_section_box {
+    min-height: calc(100vh - 70px);
+    @media screen and (width < 768px) {
+      min-height: calc(100vh - 55px);
     }
   }
 
@@ -76,6 +97,11 @@
     animation: smth_appear 200ms ease-out forwards
   }
 
+  .smth_appear_slow {
+    filter: opacity(0);
+    animation: smth_appear 1000ms ease-out forwards
+  }
+
   .smth_appear_longer {
     filter: opacity(0);
     animation: smth_appear 1s ease-out 1s forwards
@@ -100,14 +126,19 @@
     animation: fadein_down 1s ease-out 200ms forwards
   }
 
+  .fadein_left {
+    filter: opacity(0);
+    animation: fadein_left 300ms ease-out forwards
+  }
+
   .link_box:hover > .draw_menuline {
     float: left;
-    animation: draw_menuline 250ms ease-out forwards
+    animation: draw_menuline 200ms ease-out forwards
   }
 
   .link_box:not(:hover) > .draw_menuline {
     float: right;
-    animation: undraw_menuline 250ms ease-in forwards
+    animation: undraw_menuline 200ms ease-in forwards
   }
 
   @keyframes smth_appear {
@@ -119,6 +150,15 @@
     }
   }
 
+  @keyframes smth_diss {
+    from {
+      filter: opacity(1);
+    }
+    to {
+      filter: opacity(0);
+    }
+  }
+
   @keyframes fadein_down {
     from {
       filter: opacity(0);
@@ -127,6 +167,17 @@
     to {
       filter: opacity(1);
       transform: translateY(0);
+    }
+  }
+
+  @keyframes fadein_left {
+    from {
+      filter: opacity(0);
+      transform: translateX(30px);
+    }
+    to {
+      filter: opacity(1);
+      transform: translateX(0);
     }
   }
 

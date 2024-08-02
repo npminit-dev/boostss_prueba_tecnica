@@ -8,7 +8,7 @@ function App() {
     <div className='main_background'>
       <div className='bg-primary/60'>
         <NavBar/>
-        <main className='smth_appear'>
+        <main id='main' className='smth_appear'>
           <div className='max-w-[1700px] flex items-center justify-center'>
             <Outlet/>
           </div>

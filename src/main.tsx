@@ -4,8 +4,8 @@ import App from './App'
 import './output.css'
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Home from './components/home/Home';
-import Products from './components/products/Products';
 import Contact from './components/contact/Contact';
+import ProductsSection from './components/products/ProductsSection';
 
 const appRouter = createBrowserRouter([
   {
@@ -18,7 +18,7 @@ const appRouter = createBrowserRouter([
       },
       {
         path: '/products',
-        element: <Products/>
+        element: <ProductsSection/>
       },
       {
         path: '/contact',
@@ -29,7 +29,5 @@ const appRouter = createBrowserRouter([
 ])
 
 ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
-  <React.StrictMode>
-    <RouterProvider router={appRouter} />
-  </React.StrictMode>,
+  <RouterProvider router={appRouter} />
 )
