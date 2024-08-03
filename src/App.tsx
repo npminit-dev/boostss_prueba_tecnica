@@ -1,8 +1,16 @@
-import { Outlet } from 'react-router-dom'
+import { Outlet, useLocation, useNavigate } from 'react-router-dom'
 import NavBar from './components/navigation/NavBar'
 import Footer from './components/footer/Footer'
+import { useEffect } from 'react';
 
 function App() {
+
+  const navigate = useNavigate()
+  let { pathname } = useLocation()
+
+  useEffect(() => {
+    if(pathname === '/') navigate('/home')
+  }, [pathname]);
 
   return (
     <div className='main_background'>

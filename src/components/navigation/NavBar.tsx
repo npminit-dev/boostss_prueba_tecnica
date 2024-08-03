@@ -9,10 +9,6 @@ const NavBar = () => {
   const [mobileNavOpen, setMobileNavOpen] = useState<boolean>(false)
   const navigate = useNavigate()
 
-  useEffect(() => {
-    navigate('/home')
-  }, []);
-
   return ( 
     <>
       <div className="sticky w-full top-0 flex items-center justify-between px-2 nav_bg_gradient border-b-[1px] border-slate-500/30 z-50 select-none">

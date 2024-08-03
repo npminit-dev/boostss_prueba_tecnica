@@ -5,6 +5,7 @@ import Reviews from "./Reviews";
 import Title from "./Title";
 
 const Home = () => {
+
   return ( 
     <section className="z-0 section_box w-full py-4">
       <div className="h-full w-full md:hidden flex flex-col items-center justify-around">
