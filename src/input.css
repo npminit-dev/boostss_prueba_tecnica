@@ -51,6 +51,29 @@
     animation-direction: reverse;
   }
 
+  .contact_form {
+    @apply w-[calc(100vw-30px)] xs:w-[300px] h-fit my-6 py-2 md:py-4 px-3 flex flex-col items-start justify-around 
+    md:col-start-2 md:col-end-3 md:row-start-1 md:row-end-3 md:self-center md:justify-self-center
+    rounded-xl border-[1px] border-slate-500 text-[12px] md:text-[13px] 
+    smth_appear md:fadein_left_long bg-gradient-to-tr from-primary/70 from-20% via-bckgrnd/70 via-50% to-emphasis/70 to-100%;
+  }
+
+  .form_labels {
+    @apply w-full flex my-1 flex-col items-start justify-center font-merri smth_appear;
+  }
+
+  .form_selects {
+    @apply w-full mt-[2px] px-[8px] py-[5px] border-[1px] rounded-md bg-bckgrnd/50 text-text border-text/40 cursor-pointer shadow-emphasis focus:backdrop-blur-sm focus:shadow-center duration-200
+  }
+
+  .form_inputs {
+    @apply w-full mt-[2px] border-[1px] rounded-md bg-bckgrnd/50 text-text border-text/40 px-[8px] py-[5px] shadow-emphasis focus:shadow-center focus:backdrop-blur-sm duration-200;
+  }
+
+  .form_textarea {
+    @apply w-full h-[100px] mt-1 border-[1px] rounded-md bg-bckgrnd/50 text-text border-text/40 px-[8px] py-[5px] text-wrap resize-none shadow-emphasis focus:shadow-center focus:backdrop-blur-sm duration-200
+  }
+
   /* pure css classes */
 
   .main_background {
@@ -73,18 +96,6 @@
     @media screen and (width < 768px) {
       min-height: calc(100vh - 48px);
     }
-  }
-
-  .home_img {
-    background-image: url('/home_photo.webp');
-    background-size: 105% 105%;
-    background-position: center;
-    filter: grayscale(40%);
-  }
-
-  .home_img:hover {
-    background-size: 100% 100%;
-    filter: grayscale(0);
   }
 
   .text_emphasis {

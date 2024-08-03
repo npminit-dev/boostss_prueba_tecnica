@@ -19,7 +19,7 @@ const ProductsSection = () => {
     <section className="relative min_section_box w-full h-fit">
       <div className="w-full flex items-center my-1 px-1 md:px-2 justify-between flex-wrap-reverse">
         <Search fetchProducts={fetchProducts}/>
-        <RefetchBar {...{ fetchProducts, fetchWithError, setFirstFetch, isLoading: firstFetch && loadState === 'pending'}}/>
+        <RefetchBar {...{ fetchProducts, fetchWithError, setFirstFetch}}/>
       </div>
       { loadState === 'pending' && firstFetch && <PendingScreen/> }
       { loadState === 'error' && firstFetch && <ErrorScreen/> }

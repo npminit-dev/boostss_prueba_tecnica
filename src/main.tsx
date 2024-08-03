@@ -1,11 +1,14 @@
-import React from 'react'
 import ReactDOM from 'react-dom/client'
 import App from './App'
 import './output.css'
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Home from './components/home/Home';
-import Contact from './components/contact/Contact';
-import ProductsSection from './components/products/ProductsSection';
+import { lazy, Suspense } from 'react';
+import PageFallback from './components/PageFallback';
+
+const LazyProducts = lazy(() => import('../src/components/products/ProductsSection'))
+const LazyContact = lazy(() => import('../src/components/contact/Contact'))
+const LazyHome = lazy(() => import('../src/components/home/Home'))
 
 const appRouter = createBrowserRouter([
   {
@@ -14,15 +17,27 @@ const appRouter = createBrowserRouter([
     children: [
       {
         path: '/home',
-        element: <Home/>
+        element: (
+          <Suspense fallback={<PageFallback/>}>
+            <LazyHome/>
+          </Suspense>
+        )
       },
       {
         path: '/products',
-        element: <ProductsSection/>
+        element: (
+          <Suspense fallback={<PageFallback/>}>
+            <LazyProducts/>
+          </Suspense>
+        )
       },
       {
         path: '/contact',
-        element: <Contact/>
+        element: (
+          <Suspense fallback={<PageFallback/>}>
+            <LazyContact/>
+          </Suspense>
+        )
       }
     ]
   }

@@ -1,13 +1,18 @@
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
 import tailwindcss from 'tailwindcss';
+import cssnano from 'cssnano';
 
-// https://vitejs.dev/config/
 export default defineConfig({
   plugins: [react()], 
   css: {
-    postcss: {
-      plugins: [tailwindcss()],
-    },
-  }
+    postcss: { plugins: [tailwindcss(), cssnano] }
+  },
+  server: {
+    port: 3030,
+  },
+  preview: {
+    port: 8080,
+  },
+  
 })

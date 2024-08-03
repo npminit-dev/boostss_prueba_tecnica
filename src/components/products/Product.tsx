@@ -13,13 +13,13 @@ const Product = (props: ProductProps) => {
   const handleAddToCart = () => props.execCartAction({ type: 'ADD_TO_CART', payload: { name:props.name, product_id:props.id, quantity:1, price:props.price }})
   
   return (
-    <article ref={ref} className="h-[225px] w-full sm:max-w-[500px] md:basis-[400px] grow my-1 sm:m-2 rounded-lg overflow-hidden shadow-md antialiased">
+    <article ref={ref} className="h-[225px] basis-[325px] grow my-1 sm:m-2 rounded-lg overflow-hidden shadow-md antialiased">
       {
         inView ?
           <div className="relative h-full w-full flex flex-col items-center justify-between smth_appear_slow bg-bckgrnd/80">
             <div className="w-full p-1 flex flex-col items-center bg-primary">
               <h1 className="font-merri font-bold text-center text-sm md:text-base text-text">~ {props.name} ~</h1>
-              <h2 className="text-[12px] sm:text-sm text-text">{props.category}</h2>
+              <h2 className="text-[12px] hidden xs:block sm:text-sm text-text">{props.category}</h2>
             </div>
             <p className="max-w-[350px] my-2 px-1 text-center font-roboto text-[11px] sm:text-[12px] leading-tight sm:leading-normal text-text italic">"{props.description}"</p>
             <h3 className="font-merri text-[11px] sm:text-[13px] text-text"> Preparation time: {props.preparationTime}'</h3>
@@ -33,7 +33,7 @@ const Product = (props: ProductProps) => {
                 <BsCartFill className="h-[25px] w-[25px] text-primary" title="Add to cart" />
               </div> :
               <div className="mb-1 sm:mb-2 flex items-center justify-center py-1 px-4 text-text bg-bckgrnd border-slate-500/80 border-[1px] rounded-xl smth_appear opacity-50">
-                <FaCheck className="h-[25px] w-[25px] text-emphasis/80" title="Product added to cart" />
+                <FaCheck className="h-[23px] w-[23px] text-emphasis/80" title="Product added to cart" />
               </div>
             }
             <p className="absolute right-2 bottom-2 font-merri text-[12px] sm:text-sm">{ props.rating }/5⭐</p>

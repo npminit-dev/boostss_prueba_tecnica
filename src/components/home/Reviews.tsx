@@ -19,7 +19,7 @@ const Reviews = () => {
       let curr = container.current.children[review % reviews.length]
       curr.classList.remove('fadeout_left_long')
       curr.classList.add('fadein_left_long')
-      await sleep(7500)
+      await sleep(5500)
       curr.classList.remove('fadein_left_long')
       curr.classList.add('fadeout_right_long')
       await sleep(500) 
